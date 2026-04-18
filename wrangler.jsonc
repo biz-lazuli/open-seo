@@ -7,6 +7,9 @@
   "observability": {
     "enabled": true,
   },
+  "vars": {
+    "AUTH_MODE": "hosted",
+  },
   "workflows": [
     {
       "name": "site-audit-workflow",
