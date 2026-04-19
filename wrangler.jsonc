@@ -8,9 +8,8 @@
     "enabled": true,
   },
   "vars": {
-    "AUTH_MODE": "hosted",
-    "BYPASS_EMAIL_VERIFICATION": "true",
-    "BETTER_AUTH_URL": "https://open-seo.nohara-738.workers.dev",
+    "AUTH_MODE": "cloudflare_access",
+    "TEAM_DOMAIN": "https://biz-lazuli.cloudflareaccess.com",
   },
   "workflows": [
     {
