@@ -11,8 +11,16 @@ function handleAuthRequest(request: Request) {
   }
 
   if (!hasHostedAuthConfig()) {
-    return new Response("Missing Better Auth hosted configuration", {
+    const debug = {
+      AUTH_MODE: env.AUTH_MODE,
+      HAS_BETTER_AUTH_URL: !!env.BETTER_AUTH_URL,
+      HAS_BETTER_AUTH_SECRET: !!env.BETTER_AUTH_SECRET,
+      BETTER_AUTH_SECRET_LENGTH: env.BETTER_AUTH_SECRET?.length ?? 0,
+      BYPASS_EMAIL_VERIFICATION: Reflect.get(env, "BYPASS_EMAIL_VERIFICATION"),
+    };
+    return new Response(JSON.stringify(debug), {
       status: 500,
+      headers: { "Content-Type": "application/json" },
     });
   }
 
