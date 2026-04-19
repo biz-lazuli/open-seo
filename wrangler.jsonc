@@ -9,6 +9,7 @@
   },
   "vars": {
     "AUTH_MODE": "hosted",
+    "BYPASS_EMAIL_VERIFICATION": "true",
   },
   "workflows": [
     {
